@@ -1,0 +1,19 @@
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "performance_tester"
+version = "0.1.0"
+license = { text = "Apache 2.0"}
+description = "Software for testing performance"
+authors = [{name="junnaka51"}]
+requires-python = ">=3.7"
+
+[project.urls]
+homepage ="https://github.com/junnaka51/performance_tester"
+repository = "https://github.com/junnaka51/performance_tester"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
