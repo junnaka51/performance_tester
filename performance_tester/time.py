@@ -10,7 +10,7 @@ def measure_execution_time(num_exec: int = 5):
             elapsed_time_lst = []
             for _ in range(num_exec):
                 start_time = time.perf_counter()
-                func(*args, **kwargs)
+                result = func(*args, **kwargs)
                 end_time = time.perf_counter()
                 elapsed_time = end_time - start_time
                 elapsed_time_lst.append(elapsed_time)
@@ -19,5 +19,6 @@ def measure_execution_time(num_exec: int = 5):
             print(f"std : {statistics.stdev(elapsed_time_lst)} sec.")
             print(f"max : {max(elapsed_time_lst)} sec.")
             print(f"min : {min(elapsed_time_lst)} sec.")
+            return result
         return wrapper
     return measure_execution_time_wrapper
