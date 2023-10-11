@@ -5,12 +5,12 @@ Collection of modules for testing performance.
 ## Installation
 Command
 ```bash
-pip install git+https://github.com/junnaka51/performance_tester.git
+pip install performance_tester
 ```
 or add the following line in Pipfile if you use Pipenv
 ```
 [dev-packages]
-performance_tester = {git = "https://github.com/junnaka51/performance_tester.git"}
+performance_tester = "*"
 ```
 
 ## Examples
@@ -22,7 +22,7 @@ def adder(a, b): # the function that you want to check the performance
     c = a + b
     return c
 
-adder(1, 2)
+result = adder(1, 2)
 ```
 Output:
 ```
